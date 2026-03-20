@@ -10,7 +10,10 @@
     --body-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-* {
+/* Reset */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -35,6 +38,7 @@ h2 {
     color: var(--primary-color);
 }
 
+/* Header */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -53,6 +57,7 @@ header nav ul {
     list-style: none;
 }
 
+/* Links */
 a {
     color: var(--secondary-color);
     text-decoration: none;
@@ -69,6 +74,7 @@ header nav a[aria-current="page"] {
     color: var(--primary-color);
 }
 
+/* Spacing */
 nav,
 p,
 section,
@@ -77,6 +83,7 @@ article {
     padding: 8px;
 }
 
+/* Hero */
 .hero {
     position: relative;
     overflow: hidden;
@@ -97,8 +104,9 @@ article {
     padding: 16px;
     text-align: center;
 
-    background-color: #264653;
-    color: #ffffff;
+    background-color: var(--accent1-color);
+    color: var(--light-color);
+    /* FIXED (uses variable) */
 
     letter-spacing: 0.3px;
     font-size: 1.75rem;
@@ -116,6 +124,11 @@ article {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
+/* FIXED contrast issue */
+.hero article h2 {
+    color: #1a1a1a;
+}
+
 .hero article img {
     float: right;
     width: 125px;
@@ -124,6 +137,7 @@ article {
     border-radius: 4px;
 }
 
+/* Sections */
 section h2 {
     margin-bottom: 6px;
 }
@@ -132,6 +146,7 @@ section p {
     color: #333;
 }
 
+/* Footer */
 footer {
     display: flex;
     align-items: center;
@@ -148,6 +163,7 @@ footer p {
     font-weight: 600;
 }
 
+/* Social */
 .socialmedia a {
     text-decoration: none;
     display: inline-flex;
@@ -160,6 +176,7 @@ footer p {
     height: 40px;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
 
     header,
