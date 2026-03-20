@@ -1,17 +1,8 @@
-/* =========================
-   Rafting Site — Global CSS
-   ========================= */
-
-/* 1) CSS Variables (choose your own palette if you wish) */
 :root {
     --primary-color: #0b4f6c;
-    /* deep river blue */
-    --secondary-color: #16a085;
-    /* teal green */
+    --secondary-color: #0f766e;
     --accent1-color: #264653;
-    /* dark slate */
     --accent2-color: #f4a261;
-    /* warm sand */
     --light-color: #ffffff;
     --text-color: #2b2b2b;
 
@@ -19,14 +10,12 @@
     --body-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* 2) Reset / Box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 3) Base Typography & Colors */
 body {
     font-family: var(--body-font);
     color: var(--text-color);
@@ -34,7 +23,6 @@ body {
     background: #fafafa;
 }
 
-/* 4) Layout width & centering */
 header,
 main,
 footer {
@@ -42,14 +30,11 @@ footer {
     margin: 0 auto;
 }
 
-/* 5) Headings */
-h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-/* 6) Header */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -62,25 +47,28 @@ header .brand img {
     display: block;
 }
 
-/* Primary nav */
 header nav ul {
     display: flex;
     gap: 16px;
     list-style: none;
 }
 
-header nav a {
-    color: var(--accent1-color);
+a {
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
 }
 
-header nav a:hover,
-header nav a[aria-current="page"] {
-    color: var(--secondary-color);
+a:hover,
+a:focus {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
-/* 7) Spacing for common elements */
+header nav a[aria-current="page"] {
+    color: var(--primary-color);
+}
+
 nav,
 p,
 section,
@@ -89,23 +77,18 @@ article {
     padding: 8px;
 }
 
-/* 8) HERO with overlays */
 .hero {
     position: relative;
-    /* required for absolute children */
     overflow: hidden;
     border-radius: 6px;
 }
 
-/* hero background image */
 .hero img {
     display: block;
     width: 100%;
     height: auto;
-    /* preserve aspect ratio */
 }
 
-/* h1 overlay */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -113,37 +96,34 @@ article {
     width: 100%;
     padding: 16px;
     text-align: center;
-    background-color: rgba(38, 70, 83, 0.8);
-    /* var(--accent1-color) w/ transparency */
-    color: var(--light-color);
+
+    background-color: #264653;
+    color: #ffffff;
+
     letter-spacing: 0.3px;
     font-size: 1.75rem;
+    font-family: var(--heading-font);
 }
 
-/* article overlay */
 .hero article {
     position: absolute;
     bottom: 16px;
     left: 16px;
     right: 16px;
     background: rgba(244, 162, 97, 0.95);
-    /* warm sand panel */
     color: #1a1a1a;
     border-radius: 6px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-/* image inside hero article */
 .hero article img {
     float: right;
-    /* per requirement */
     width: 125px;
     height: auto;
     margin: 8px 0 8px 12px;
     border-radius: 4px;
 }
 
-/* 9) Sections */
 section h2 {
     margin-bottom: 6px;
 }
@@ -152,7 +132,6 @@ section p {
     color: #333;
 }
 
-/* 10) Footer */
 footer {
     display: flex;
     align-items: center;
@@ -169,7 +148,6 @@ footer p {
     font-weight: 600;
 }
 
-/* social icons — remove underline for icons only */
 .socialmedia a {
     text-decoration: none;
     display: inline-flex;
@@ -182,7 +160,6 @@ footer p {
     height: 40px;
 }
 
-/* Optional: small-screen nicety if you preview on narrow window */
 @media (max-width: 900px) {
 
     header,
