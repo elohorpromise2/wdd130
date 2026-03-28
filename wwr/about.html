@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
@@ -8,7 +8,7 @@
     <title>About Us — Exciting Expeditions</title>
 
     <meta name="description"
-      content="Learn about Exciting Expeditions: our mission, history, and commitment to safe, unforgettable white water rafting adventures.">
+      content="Learn about Exciting Expeditions: our mission, history, and rafting adventures.">
     <meta name="author" content="Promise Elohor">
 
     <link rel="stylesheet" href="styles/rafting.css">
@@ -17,13 +17,13 @@
 <body>
     <header>
         <a class="brand" href="index.html">
-            <img src="images/logo.svg" alt="Exciting Expeditions logo" width="180" height="48">
+            <img src="images/logo.svg" alt="Exciting Expeditions logo">
         </a>
 
-        <nav aria-label="Primary">
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" aria-current="page">About Us</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
                 <li><a href="trips.html">Trips</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -31,59 +31,92 @@
     </header>
 
     <main>
-        <div class="hero">
-            <img src="images/hero-rafting.jpg"
-              alt="Raft navigating lively whitewater rapids with rocky canyon surroundings."
-              width="1600" height="900">
 
-            <h1>Exciting Expeditions</h1>
+        <!-- HERO -->
+        <div class="hero">
+            <img src="images/hero-rafting.jpg" alt="White water rafting adventure">
+
+            <h1>White Water Rafting</h1>
 
             <article>
-                <h2>Our Mission</h2> <!-- FIXED: added heading -->
-
-                <img src="images/happy-client.jpg"
-                  alt="Guest in rafting gear on a raft near a calm eddy." width="125" height="125">
-
+                <img src="images/happy-client.jpg" alt="Happy rafting client">
                 <p>
-                    At Exciting Expeditions, our mission is to design guided river experiences that
-                    blend safety, skill-building, and pure fun. Whether it’s a first splash or a
-                    next
-                    big rapid, our professional guides help guests read water, build confidence, and
-                    create memories that last well beyond the take-out.
+                    Experience the thrill of white water rafting with our expert guides.
+                    We provide safe, exciting, and unforgettable river adventures for all skill
+                    levels.
                 </p>
             </article>
         </div>
 
-        <section aria-labelledby="history-heading">
-            <h2 id="history-heading">History</h2>
-            <p>
-                Founded in 1996 by a small crew of river enthusiasts, Exciting Expeditions grew from
-                weekend runs into a full-season operation. What began as a single inflatable and a
-                borrowed trailer evolved into a well-equipped fleet and an unwavering commitment to
-                responsible, small-group river travel.
-            </p>
+        <!-- HISTORY -->
+        <section class="history">
+            <h2>History</h2>
+
+            <div class="history-content">
+                <p>
+                    Founded in 1996, Exciting Expeditions began as a small group of river lovers
+                    seeking adventure and sharing their passion with others.
+                </p>
+
+                <img src="images/history.jpg" alt="Rafting history">
+
+                <p>
+                    Over the years, we have grown into a trusted rafting company known for
+                    safety, fun, and unforgettable outdoor experiences.
+                </p>
+            </div>
         </section>
 
-        <section aria-labelledby="adventure-heading">
-            <h2 id="adventure-heading">Adventure Awaits You!</h2>
+        <!-- ADVENTURES -->
+        <section class="adventures">
+            <h2>Adventure Awaits You!</h2>
+
+            <div class="adventure-gallery">
+                <figure>
+                    <img src="images/raft1.jpg" alt="Los Dientes del Diablo">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/raft2.jpg" alt="Big Mallard">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/raft3.jpg" alt="Half Day Adventure">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/raft4.jpg" alt="Rapid Rush">
+                    <figcaption>Rapid Rush</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/raft5.jpg" alt="Thunder Run">
+                    <figcaption>Thunder Run</figcaption>
+                </figure>
+            </div>
         </section>
+
     </main>
 
     <footer>
-        <p>© 2026 • Exciting Expeditions • Promise Elohor</p>
+        <p>© 2026 | Exciting Expeditions | Promise Elohor</p>
 
-        <nav class="socialmedia" aria-label="Social media">
-            <a href="https://facebook.com" target="_blank" rel="noopener">
-                <img src="images/facebook.svg" alt="Facebook icon" width="40" height="40">
+        <div class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook">
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener">
-                <img src="images/linkedin.svg" alt="LinkedIn icon" width="40" height="40">
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram">
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener">
-                <img src="images/instagram.svg" alt="Instagram icon" width="40" height="40">
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="LinkedIn">
             </a>
-        </nav>
+        </div>
     </footer>
+
 </body>
 
 </html>

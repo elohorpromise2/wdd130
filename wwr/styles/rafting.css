@@ -1,187 +1,146 @@
 :root {
     --primary-color: #0b4f6c;
     --secondary-color: #0f766e;
-    --accent1-color: #264653;
-    --accent2-color: #f4a261;
-    --light-color: #ffffff;
-    --text-color: #2b2b2b;
-
-    --heading-font: "Georgia", "Times New Roman", serif;
-    --body-font: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --accent-color: #f4a261;
+    --light: #ffffff;
+    --dark: #222;
 }
 
-/* Reset */
-*,
-*::before,
-*::after {
+/* RESET */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    font-family: var(--body-font);
-    color: var(--text-color);
-    line-height: 1.55;
+    font-family: Arial, sans-serif;
     background: #fafafa;
+    color: var(--dark);
 }
 
+/* PAGE WIDTH */
 header,
 main,
 footer {
-    width: 840px;
+    width: 900px;
     margin: 0 auto;
 }
 
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* Header */
+/* HEADER (GRID) */
 header {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 200px 1fr;
     align-items: center;
-    gap: 16px;
-    padding: 12px 0;
+    padding: 20px 0;
 }
 
-header .brand img {
-    display: block;
-}
-
-header nav ul {
+/* NAV (FLEX) */
+nav ul {
     display: flex;
-    gap: 16px;
+    justify-content: flex-end;
+    gap: 20px;
     list-style: none;
 }
 
-/* Links */
-a {
-    color: var(--secondary-color);
+nav a {
     text-decoration: none;
-    font-weight: 600;
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 
-a:hover,
-a:focus {
-    color: var(--primary-color);
-    text-decoration: underline;
-}
-
-header nav a[aria-current="page"] {
+nav a.active {
     color: var(--primary-color);
 }
 
-/* Spacing */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* Hero */
+/* HERO */
 .hero {
     position: relative;
-    overflow: hidden;
-    border-radius: 6px;
 }
 
 .hero img {
-    display: block;
     width: 100%;
-    height: auto;
 }
 
 .hero h1 {
     position: absolute;
     top: 20px;
-    left: 0;
     width: 100%;
-    padding: 16px;
     text-align: center;
-
-    background-color: var(--accent1-color);
-    color: var(--light-color);
-    /* FIXED (uses variable) */
-
-    letter-spacing: 0.3px;
-    font-size: 1.75rem;
-    font-family: var(--heading-font);
+    background: var(--primary-color);
+    color: white;
+    padding: 10px;
 }
 
 .hero article {
     position: absolute;
-    bottom: 16px;
-    left: 16px;
-    right: 16px;
-    background: rgba(244, 162, 97, 0.95);
-    color: #1a1a1a;
-    border-radius: 6px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* FIXED contrast issue */
-.hero article h2 {
-    color: #1a1a1a;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    padding: 15px;
 }
 
 .hero article img {
     float: right;
-    width: 125px;
-    height: auto;
-    margin: 8px 0 8px 12px;
-    border-radius: 4px;
+    width: 120px;
+    margin-left: 10px;
 }
 
-/* Sections */
-section h2 {
-    margin-bottom: 6px;
+/* HISTORY (GRID) */
+.history {
+    margin: 30px 0;
 }
 
-section p {
-    color: #333;
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+    align-items: center;
 }
 
-/* Footer */
+.history-content img {
+    width: 100%;
+}
+
+/* ADVENTURES (FLEX) */
+.adventures {
+    margin: 30px 0;
+}
+
+.adventure-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.adventure-gallery figure {
+    flex: 1;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    width: 100%;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
 footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 16px;
-    padding: 16px 0 24px;
-    border-top: 3px solid var(--accent2-color);
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px solid var(--accent-color);
 }
 
-footer p {
-    margin: 0 16px;
-    padding: 0;
-    color: var(--accent1-color);
-    font-weight: 600;
-}
-
-/* Social */
-.socialmedia a {
-    text-decoration: none;
-    display: inline-flex;
-    margin-right: 8px;
+.socialmedia {
+    display: flex;
+    gap: 10px;
 }
 
 .socialmedia img {
-    display: block;
     width: 40px;
-    height: 40px;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-
-    header,
-    main,
-    footer {
-        width: 94%;
-    }
 }
