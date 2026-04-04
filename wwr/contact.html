@@ -44,7 +44,7 @@
         <!-- MAP + FORM -->
         <section class="contact-grid">
 
-            <!-- GOOGLE MAP -->
+            <!-- MAP -->
             <div class="map">
                 <iframe src="https://www.google.com/maps?q=kolob+utah&output=embed" loading="lazy">
                 </iframe>
@@ -62,32 +62,26 @@
                 <input type="email" id="email" name="email" required>
 
                 <!-- PURPOSE -->
-                <p>Message Purpose</p>
+                <fieldset>
+                    <legend>Message Purpose</legend>
 
-                <label for="general">
                     <input type="radio" id="general" name="purpose" value="general" checked>
-                    General Inquiry
-                </label>
+                    <label for="general">General Inquiry</label>
 
-                <label for="reservation">
                     <input type="radio" id="reservation" name="purpose" value="reservation">
-                    Reservation Question
-                </label>
+                    <label for="reservation">Reservation Question</label>
 
-                <label for="suggestion">
                     <input type="radio" id="suggestion" name="purpose" value="suggestion">
-                    Website Suggestion
-                </label>
+                    <label for="suggestion">Website Suggestion</label>
+                </fieldset>
 
                 <!-- MESSAGE -->
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5"></textarea>
 
                 <!-- CHECKBOX -->
-                <label for="subscribe">
-                    <input type="checkbox" id="subscribe" name="subscribe">
-                    Please subscribe me to the monthly newsletter
-                </label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <label for="subscribe">Please subscribe me to the monthly newsletter</label>
 
                 <!-- SUBMIT -->
                 <button type="submit">Send Message</button>
