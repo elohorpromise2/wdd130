@@ -174,6 +174,26 @@ footer {
     color: white;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    padding: 10px;
+}
+
 /* NEWSLETTER */
 .newsletter {
     margin: 40px 0;
