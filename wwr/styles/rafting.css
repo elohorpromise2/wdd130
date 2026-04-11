@@ -247,3 +247,63 @@ td {
     padding: 10px;
     text-align: center;
 }
+
+/* Contact */
+.contact-info {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin: 30px 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.contact-form {
+    display: grid;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form button {
+    padding: 10px;
+    font-size: 1rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--primary-color);
+}
+
+.employees {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.employee-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.employee-gallery figure {
+    flex: 1;
+}
+
+.employee-gallery img {
+    width: 100%;
+}
